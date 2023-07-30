@@ -12,6 +12,7 @@ void main() {
     final result = calc.add(num1, num2);
 
     expect(result, expectedResult);
+    
   
   });
 
@@ -39,7 +40,7 @@ void main() {
     const num2 = 0;
     final expectedResult = throwsA(isA<Exception>());
 
-    final result = ()=>calc.divideby(num1, num2);
+    result()=>calc.divideby(num1, num2);
     expect(result, expectedResult);
   });
 }
